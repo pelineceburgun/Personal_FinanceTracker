@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Finance Tracker</h1>
+    <div id="balance">
+      <h2>Balance: <span id="balance-amount">0</span>₺</h2>
+    </div>
+    <div id="summary">
+      <div class="summary-card">
+        <h3>Total Income</h3>
+        <p id="total-income"></p>
+      </div>
+      <div class="summary-card">
+        <h3>Total Expense</h3>
+        <p id="total-expense"></p>
+      </div>
+    </div>
+    <form id="transaction-form">
+      <input type="text" id="description" placeholder="Transaction Description" required>
+      <input type="number" id="amount" placeholder="Amount (+income, -expense)" required>
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="income">Salary</option>
+        <option value="income">Present</option>
+        <option value="income">Bonus</option>
+        <option value="expense">Shopping</option>
+        <option value="expense">Bills</option>
+        <option value="expense">Food</option>
+      </select>
+
+      <button type="submit" class="primary-button">Add Transaction</button>
+
+    </form>
+    <h3>Transaction History</h3>
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <canvas id="myChart" width="300" height="150"></canvas>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
